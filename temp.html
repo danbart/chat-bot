@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+ 
+.globo1 {
+    position:relative;
+    padding:15px;
+    margin:1em 0 3em;
+    border:2px solid #bde1fd;
+    color:#333;
+    background:#fff;
+    /* css3 */
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    margin-left:30px;
+}
+ 
+.globo1:before {
+    content:"";
+    position:absolute;
+    border-style:solid;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+    top:10px; /* controls vertical position */
+    bottom:auto;
+    left:-30px; /* value = - border-left-width - border-right-width */
+    border-width:15px 30px 15px 0;
+    border-color:transparent #bde1fd;
+}
+ 
+.globo1:after {
+    content:"";
+    position:absolute;
+    border-style:solid;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+    top:16px; /* value = (:before top) + (:before border-top) - (:after border-top) */
+    bottom:auto;
+    left:-21px; /* value = - border-left-width - border-right-width */
+    border-width:9px 21px 9px 0;
+    border-color:transparent #fff;
+}
+</style>
+</head>
+ 
+<body>
+<div class="globo1">Hola Mundo</div>
+</body>
+</html>
